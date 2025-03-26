@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+
+	
+    <style>
+		button#files{
+		background-color: #e7e7e7;
+    		height: 8%;
+    		width: 50%;
+    		border-radius: 20px;
+    		box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    		transition: all 0.5s ease;
+		margin-left: 95px
+		}
+
+
+		button#addsongs{
+		background-color: #e7e7e7;
+    		height: 8%;
+    		width: 30%;
+    		border-radius: 20px;
+    		box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    		transition: all 0.5s ease;
+		margin-left: 140px
+		}
+	</style>
+
+	<script>
+        document.getElementById("addsongs").addEventListener("click", function() {
+            document.getElementById("file-input").click();
+        });
+    </script>
+    <title>Music Player</title>
+</head>
+
+<body>
+
+    <div class="background">
+        <img src="./MGMT.jpg" id="bg-img">
+    </div>
+
+   <div class="container">
+        <div class="player-img">
+            <img src="./MGMT.jpg" class="active" id="cover">
+        </div>
+
+        <h2 id="music-title">Kids</h2>
+        <h3 id="music-artist">MGMT</h3>
+
+        <div class="player-progress" id="player-progress">
+            <div class="progress" id="progress"></div>
+            <div class="music-duration">
+                <span id="current-time">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+        </div>
+
+        <div class="player-controls">
+            <i class="fa-solid fa-backward" title="Previous" id="prev"></i>
+            <i class="fa-solid fa-play play-button" title="Play" id="play"></i>
+            <i class="fa-solid fa-forward" title="Next" id="next"></i>
+        </div>
+	<br>
+	<br>
+
+
+	<button id="files"> <input type="file" id="file-input" accept="audio/*" multiple> </button> 
+
+
+	<br>
+	<br>
+        <button id="addsongs" onclick="loadLocalSongs()">Add Local Songs</button>
+	
+        <script src="index.js"></script>
+    </div>
+</html>
